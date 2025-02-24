@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #242222;
+    
+}
+.signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 100px;
+    background: #f0e8e8;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+    background-image: url("../Image/sig.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display:flex;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:rgb(83, 67, 155);
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.form-group button {
+    width: 75%;
+    padding: 10px;
+    background-color: #4e6074;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.form-group button:hover {
+    background-color: #0056b3;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #111010;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}

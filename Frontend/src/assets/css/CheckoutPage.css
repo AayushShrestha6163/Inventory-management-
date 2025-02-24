@@ -1,0 +1,116 @@
+/* Checkout Page Styles */
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .checkout-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .cart-items,
+  .checkout-details {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-items h2,
+  .checkout-details h3 {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    margin-bottom: 15px;
+  }
+  
+  .cart-items ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .checkout-details textarea,
+  .checkout-details input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+  }
+  
+  .checkout-details textarea:focus,
+  .checkout-details input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  .checkout-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .checkout-total h4 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .checkout-container button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .checkout-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .checkout-container button:focus {
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .checkout-container {
+      padding: 15px;
+    }
+  
+    .cart-items,
+    .checkout-details {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .checkout-total h4 {
+      font-size: 1.1rem;
+    }
+  
+    .checkout-container button {
+      font-size: 1.1rem;
+    }
+  }
+  
