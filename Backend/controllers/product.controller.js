@@ -28,6 +28,7 @@ const upload = multer({ storage: storage }).single("image"); // Single file uplo
 // Create Product
 exports.createProduct = (req, res) => {
   // First, handle file upload
+  
   upload(req, res, async (err) => {
     if (err) {
       return res.status(500).send({ message: "Error uploading image", error: err.message });

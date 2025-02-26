@@ -4,7 +4,7 @@
   "description": "test",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "node js",
@@ -24,5 +24,10 @@
     "pg": "^8.11.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "sequelize-mock": "^0.10.2",
+    "supertest": "^7.0.0"
   }
 }
