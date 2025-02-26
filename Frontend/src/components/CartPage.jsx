@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import "../assets/css/CartPage.css"; // Optional: for custom styling
 
 const CartPage = () => {
-  const [cart, setCart] = useState([]); // State to hold the cart items
+  const [cart, setCart] = useState([]); 
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Retrieve cart from localStorage
+   
     const savedCart = JSON.parse(localStorage.getItem("cart"));
     if (savedCart) {
       setCart(savedCart);
@@ -24,13 +24,13 @@ const CartPage = () => {
   const cartTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 
   const handleProceedToCheckout = () => {
-    // Check if the user is logged in
+    
     const username = localStorage.getItem("username");
     if (!username) {
-      // Redirect to the login page if not logged in
+      
       navigate("/Login");
     } else {
-      // Redirect to checkout page if logged in
+      
       navigate("/checkout");
     }
   };

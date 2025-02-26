@@ -10,7 +10,7 @@ const CheckoutPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Get cart from localStorage
+    
     const savedCart = JSON.parse(localStorage.getItem("cart"));
     if (savedCart) {
       setCart(savedCart);
@@ -21,10 +21,10 @@ const CheckoutPage = () => {
   }, [navigate]);
 
   const handleCheckout = async () => {
-    // Get the logged-in user's ID (you can change this based on your auth system)
+   
     const userId = localStorage.getItem("userId") || "guest";
 
-    // Prepare the order data
+    
     const orderData = {
       userId,
       cart,
@@ -34,7 +34,7 @@ const CheckoutPage = () => {
     };
 
     try {
-      // Send the order details to the API
+     
       const response = await fetch(`${process.env.REACT_APP_API_URL}/orders`, {
         method: 'POST',
         headers: {
@@ -45,7 +45,7 @@ const CheckoutPage = () => {
 
       const data = await response.json();
       if (response.ok) {
-        // After successful checkout, clear the cart and redirect
+        
         localStorage.removeItem("cart");
         navigate("/order-confirmation");
       } else {

@@ -13,7 +13,7 @@ const LandingPage = () => {
   const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
-    // Fetch products from the API
+   
     const fetchProducts = async () => {
       try {
         const response = await fetch(`${process.env.REACT_APP_API_URL}/allproducts`);
@@ -31,13 +31,13 @@ const LandingPage = () => {
 
     fetchProducts();
 
-    // Check if the user is logged in and set the username
+    
     const loggedInUsername = localStorage.getItem("username");
     if (loggedInUsername) {
       setUsername(loggedInUsername);
     }
 
-    // Retrieve cart from localStorage (if any)
+    
     const savedCart = JSON.parse(localStorage.getItem("cart"));
     if (savedCart) {
       setCart(savedCart);
@@ -48,7 +48,7 @@ const LandingPage = () => {
     const existingProduct = cart.find(item => item.id === product.id);
     
     if (existingProduct) {
-      // Check if adding this product exceeds the stock
+      
       const totalQuantityInCart = existingProduct.quantity + 1;
       
       if (totalQuantityInCart <= product.stock) {
@@ -63,7 +63,7 @@ const LandingPage = () => {
         alert(`You can only add ${product.stock - existingProduct.quantity} more item(s) to your cart.`);
       }
     } else {
-      // If product isn't in the cart, add it with quantity 1
+      
       const updatedCart = [...cart, { ...product, quantity: 1 }];
       setCart(updatedCart);
       localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -92,7 +92,7 @@ const LandingPage = () => {
     }
   };
 
-  // Render the stock message
+  
   const renderStockMessage = (item) => {
     const itemInCart = cart.find(cartItem => cartItem.id === item.id);
     const itemStockLeft = item.stock - (itemInCart ? itemInCart.quantity : 0);
@@ -103,7 +103,7 @@ const LandingPage = () => {
 
     return `Left: ${itemStockLeft}`;
   };
-  // Render Add to Cart Button
+
   const renderAddToCartButton = (item) => {
     const itemInCart = cart.find(cartItem => cartItem.id === item.id);
     const itemStockLeft = item.stock - (itemInCart ? itemInCart.quantity : 0);

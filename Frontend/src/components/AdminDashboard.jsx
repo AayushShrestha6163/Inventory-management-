@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { FaBell } from 'react-icons/fa'; // Import Bell Icon
 import '../assets/css/AdminDashboard.css';
 
-// Importing Content Components
+
 import DashboardContent from './DashboardContent';
 import SettingsContent from './SettingsContent';
 import UserListContent from './user/List';
@@ -16,7 +16,7 @@ function AdminDashboard() {
   const [lowStockProducts, setLowStockProducts] = useState([]); // Store low-stock products
   const [showModal, setShowModal] = useState(false); // Show Modal on Bell Click
 
-  // Handle logout
+
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
@@ -24,12 +24,12 @@ function AdminDashboard() {
     window.location.href = '/login';
   };
 
-  // Handle sidebar toggle
+  
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  // Fetch low-stock products
+
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
     if (storedUsername) {
@@ -39,7 +39,7 @@ function AdminDashboard() {
     fetchLowStockProducts();
   }, []);
 
-  // Function to fetch low-stock products
+ 
   const fetchLowStockProducts = async () => {
     try {
       const token = localStorage.getItem('token');
@@ -62,17 +62,17 @@ function AdminDashboard() {
     }
   };
 
-  // Function to handle the active link change
+  
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
 
-  // Toggle modal visibility
+  
   const toggleModal = () => {
     setShowModal(!showModal);
   };
 
-  // Function to render dynamic content based on the active link
+  
   const renderContent = () => {
     switch (activeLink) {
       case 'dashboard':

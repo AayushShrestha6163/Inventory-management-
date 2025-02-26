@@ -7,7 +7,7 @@ const DashboardContent = () => {
   });
 
   useEffect(() => {
-    // Fetch products and orders count from the API
+   
     const fetchCounts = async () => {
       try {
         const token = localStorage.getItem('token');
@@ -21,7 +21,7 @@ const DashboardContent = () => {
         const data = await response.json();
 
         if (response.ok) {
-          // Update state with the fetched counts
+          
           setCounts({
             products: data.products || 0,
             orders: data.orders || 0,
@@ -35,8 +35,7 @@ const DashboardContent = () => {
     };
 
     fetchCounts();
-  }, []); // Empty dependency array means it runs once when the component mounts
-
+  }, []); 
   return (
     <div className="admin-dashboard">
       <header className="dashboard-header">

@@ -211,7 +211,6 @@ const ProductListPage = () => {
                   placeholder="Product Name"
                   value={newProduct.name}
                   onChange={handleInputChange}
-                  required
                 />
                 <input
                   type="text"
@@ -219,7 +218,6 @@ const ProductListPage = () => {
                   placeholder="Description"
                   value={newProduct.description}
                   onChange={handleInputChange}
-                  required
                 />
                 <input
                   type="number"
@@ -227,7 +225,6 @@ const ProductListPage = () => {
                   placeholder="Price"
                   value={newProduct.price}
                   onChange={handleInputChange}
-                  required
                 />
                 <input
                   type="number"
